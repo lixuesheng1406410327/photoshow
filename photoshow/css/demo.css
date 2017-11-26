@@ -1,0 +1,100 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+header{
+	height: 50px;
+	background-color: #2ecc71;
+	text-align: center;
+	line-height: 50px;
+	font-size: 2em;
+	font-family: 楷体;
+	color: #fff;
+}
+
+/*类选择器*/
+body{
+	background: url(../img/wall.jpg);
+}
+.photo-box{
+	position: relative;/*相对定位*/
+	min-width: 960px;
+	width: 80%;
+	margin: 0 auto;/*在父容器中水平居中*/
+	padding: 50px 20px;/*内边距20*/
+	
+	
+}
+.photo-box>img{
+	z-index: 0;
+	position: relative;
+	float: left;
+	width: 240px;
+	height: 180px;
+	border: 8px solid #eee;
+	box-shadow: 5px 5px 5px rgba(0,0,0,0.2);/*盒子的阴影:x轴平移,Y轴的平移*/
+	transition: all 1s;
+	cursor: pointer;/*设置鼠标指针为手指*/
+}
+/*子选择器*/
+.photo-box>img:hover{
+	/*放大*/
+	transform: scale(2.5);
+	z-index: 9999;
+}
+
+.p1{transform: rotate(20deg);}
+.p2{transform: rotate(-20deg);}
+.p3{transform: rotate(10deg);}
+.p4{transform: rotate(-12deg);}
+.p5{transform: rotate(15deg);}
+.p6{transform: rotate(-14deg);}
+.p7{transform: rotate(27deg);}
+.p8{transform: rotate(-24deg);}
+.p9{transform: rotate(30deg);}
+.p10{transform: rotate(-15deg);}
+.p11{transform: rotate(27deg);}
+.p12{transform: rotate(-30deg);}
+
+
+.music-box{
+	position: absolute;/*绝对定位*/
+	right: 20px;
+	top: 70px;
+	width: 50px;
+	height: 50px;
+	overflow: hidden;
+	border-radius: 50%;
+	border: 5px solid #FFF;
+	cursor: pointer;
+}
+
+.music-box>img{
+	width: 100%;
+	height: 100%;
+}
+.play{
+	animation: music-play 5s infinite linear;
+}
+/*自定义动画*/
+@keyframes music-play{
+	from{transform: rotate(0deg);}
+	to{transform: rotate(360deg);}
+}
+/*模态窗口的样式*/
+.modal{
+	position: absolute;/*定位*/
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-width: 960px;
+	text-align: center;/*默认居中*/
+	background-color: rgba(0,0,0,0.8);
+	z-index: 10000;
+}
+
+.img-item{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
